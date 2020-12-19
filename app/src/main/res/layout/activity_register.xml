@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterActivity"
+    android:background="#fff">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="329dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/login" />
+
+    <LinearLayout
+        android:id="@+id/register_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/shape_login_form"
+        android:orientation="vertical"
+        android:paddingLeft="43dp"
+        android:paddingRight="31dp">
+
+        <LinearLayout
+            android:layout_marginTop="56dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/account" />
+
+            <EditText
+                android:id="@+id/et_register_account"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/register_hint"
+                android:textColor="#000"
+                android:textColorHint="#bcbcbc" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e8e7e7"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="23dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="56dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/pwd" />
+
+            <EditText
+                android:id="@+id/et_register_pw"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/register_hint_pw"
+                android:textColor="#000"
+                android:textColorHint="#bcbcbc" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/register_form_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/register"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_below="@id/register_form"
+        android:layout_marginTop="67dp"
+        android:background="@drawable/shape_register_btn"/>
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity"
+    android:background="#fff">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_329dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/login" />
+
+    <LinearLayout
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="278dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:paddingLeft="43dp"
+        android:paddingRight="31dp"
+        android:background="@drawable/shape_login_form">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:orientation="vertical"
+            android:layout_marginTop="56dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/account"></ImageView>
+
+                <EditText
+                    android:text="，"
+                    android:id="@+id/et_login_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:hint="@string/login_hint"
+                    android:textColor="#000"
+                    android:textColorHint="#bcbcbc"
+                    android:background="@null"
+                    android:textSize="18sp"></EditText>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e8e7e7"
+                android:layout_marginTop="23dp"
+                android:layout_marginBottom="23dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/pwd"></ImageView>
+
+                <EditText
+                    android:id="@+id/et_login_pw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:hint="@string/login_hint_pw"
+                    android:textColor="#000"
+                    android:text="，"
+                    android:textColorHint="#bcbcbc"
+                    android:background="@null"
+                    android:textSize="18sp"></EditText>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_below="@id/login_form"
+        android:id="@+id/login_form_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:background="@drawable/shape_login_btn"
+        android:layout_marginTop="67dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:textSize="24sp"/>
+</RelativeLayout>

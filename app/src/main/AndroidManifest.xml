@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    java -jar G:\download/renren-fast.jar       -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.slq.myapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/kona1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Myapp"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.WebActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.LoginActivity" /> <!-- 多次点击登录会发送多次请求，加个singleTop简单处理一下 -->
+        <activity
+            android:name=".activity.HomeActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

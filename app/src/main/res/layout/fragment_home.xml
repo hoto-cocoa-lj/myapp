@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:background="#344261"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/shape_searchbox">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="13dp"
+                    android:src="@mipmap/search" />
+
+                <EditText
+                    android:id="@+id/fragment_home_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="11dp"
+                    android:background="@null"
+                    android:hint="搜索你喜欢的视频"
+                    android:textColorHint="#737373"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tl_10"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                tl:tl_textsize="16sp"
+                tl:tl_divider_color="#ff0"
+                tl:tl_divider_width="1sp"
+                tl:tl_indicator_corner_radius="5dp"
+                tl:tl_indicator_margin_left="2dp"
+                tl:tl_indicator_margin_right="2dp"
+                tl:tl_indicator_style="BLOCK"
+                tl:tl_textSelectColor="#fdf299"
+                tl:tl_textUnselectColor="#fff"        />
+
+        </LinearLayout>
+        <!--com.slq.myapp.view.FixedViewPager-->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+</FrameLayout>
